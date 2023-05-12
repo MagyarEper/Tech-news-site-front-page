@@ -13,6 +13,8 @@
 * {
   margin: 0;
   padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
@@ -39,6 +41,7 @@ html {
 
 #menu-list {
   list-style: none;
+  display: none;
   position: absolute;
   right: 0;
   top: 0;
@@ -142,4 +145,103 @@ html {
 
 .card-content p {
   font-size: 15px;
+}
+#desktop-menu-list {
+  display: none;
+}
+
+@media (min-width: 376px) {
+  body {
+    height: 100%;
+    padding: 0px 100px 0 100px;
+  }
+  .hero-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+  }
+  .hero-content {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    padding-top: 20px;
+  }
+  .hero-content h1 {
+    font-size: 45px;
+  }
+  .news-section {
+    grid-column: 2;
+    grid-row: 1/2;
+    margin-top: 0;
+  }
+  .news-section h2 {
+    font-size: 55px;
+  }
+  .news-section h3 {
+    font-size: 30px;
+  }
+  .news-section p {
+    font-size: 18px;
+  }
+  .hero-image {
+    grid-row: auto;
+    grid-column: 1;
+  }
+
+  #menu-icon {
+    visibility: hidden;
+  }
+  #menu-list {
+    visibility: hidden;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 10px;
+  }
+  .cards img {
+    width: 100%;
+    height: 240px;
+  }
+  .card-content {
+    padding-right: 20px;
+  }
+  .card-content h1 {
+    font-size: 35px;
+  }
+  .card-content h3 {
+    font-size: 25px;
+  }
+  .card-content p {
+    font-size: 20px;
+  }
+  #desktop-menu-list {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-size: 18px;
+    padding: 25px 125px 25px 25px;
+  }
+  #desktop-menu-list li:hover {
+    color: var(--soft-orange);
+    cursor: pointer;
+  }
+
+  .news-section h3:hover {
+    color: var(--soft-orange);
+    cursor: pointer;
+  }
+  .hero-content button:hover {
+    background-color: var(--Very-dark-blue);
+    cursor: pointer;
+  }
+  .card-content h3:hover {
+    color: var(--soft-orange);
+    cursor: pointer;
+  }
 }
