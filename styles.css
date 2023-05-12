@@ -155,6 +155,7 @@ html {
     height: 100%;
     padding: 0px 100px 0 100px;
   }
+
   .hero-section {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -169,6 +170,10 @@ html {
   }
   .hero-content h1 {
     font-size: 45px;
+  }
+  .hero-content p {
+    font-size: 18px;
+    font-weight: 700;
   }
   .news-section {
     grid-column: 2;
@@ -214,7 +219,8 @@ html {
     font-size: 25px;
   }
   .card-content p {
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 700;
   }
   #desktop-menu-list {
     list-style: none;
